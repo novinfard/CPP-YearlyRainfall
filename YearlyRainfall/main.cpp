@@ -16,6 +16,8 @@ int main(int argc, const char * argv[]) {
 	const array<double, 12> rainfallData = {215.6, 167.8, 86.3, 85.5, 80.5, 62.4, 118.5, 112.5, 171.8, 48.7, 101.4, 129.6};
 	Rainfall Rainfall2016(rainfallData);
 	
+	Rainfall2016.outputBarChart();
+	
 	// get the rainfall value of second month (Februrary)
 	cout << Rainfall2016.getMonthAmount(2) << endl;
 	

@@ -23,6 +23,9 @@ public:
 	void getHighest();
 	void getLowest();
 	
+	/* call function outputBarChart to print mark distribution chart*/
+	void outputBarChart();
+	
 private:
 	std::array<double, 12> rainfalls;
 	std::string getMonthNameByNumber(int);

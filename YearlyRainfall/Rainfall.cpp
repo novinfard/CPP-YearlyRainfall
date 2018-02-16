@@ -77,4 +77,28 @@ string Rainfall::getMonthNameByNumber(int monthNumber) {
 	return months[monthNumber-1];
 }
 
+void Rainfall::outputBarChart() {
+	cout << "\nRainfall distribution:" << endl;
+	
+	for (int i=0; i<12; i++) {
+		cout << getMonthNameByNumber(i+1) << endl;
+		if(rainfalls[i] < 60) {
+			cout << "||";
+		} else if (rainfalls[i] >= 60 && rainfalls[i] < 100)
+		{
+			cout << "||||";
+		} else if (rainfalls[i] >= 100 && rainfalls[i] < 150)
+		{
+			cout << "||||||";
+		} else if (rainfalls[i] >= 150 && rainfalls[i] < 200)
+		{
+			cout << "||||||||";
+		} else if (rainfalls[i] >= 200)
+		{
+			cout << "||||||||||";
+		}
+		cout << endl << endl;
+	}
+}
+
 
